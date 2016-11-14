@@ -15,12 +15,12 @@ namespace Logging {
         }
 
         public void Run() {
+
             Log.LogInformation("Hello World");
 
             Log.LogWarning("Oh no the world might blow");
 
             Log.LogError("Oh my god the world is gonna blow!");
-
             
         }
 
