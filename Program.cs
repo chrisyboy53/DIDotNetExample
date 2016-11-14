@@ -21,7 +21,7 @@ namespace Logging
                 app.Run();
             }
             else {
-                throw new Exception("No application instance. Check your dependencies.");
+                throw new InvalidOperationException("No application instance. Check your dependencies.");
             }
         
         }
