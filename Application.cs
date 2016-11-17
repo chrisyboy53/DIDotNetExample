@@ -14,7 +14,7 @@ namespace Logging
         /// Uses the dependency injection to pass in the Logging
         /// factory.
         /// </summary>
-        /// <param name="logger">Logger Factory Instance</param>
+        /// <param name="logger">Logger Instance</param>
         public Application (ILogger<Application> logger)
         {    
             Log = logger;
