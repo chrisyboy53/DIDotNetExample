@@ -8,20 +8,16 @@ namespace Logging
     /// </summary>
     public class Application {
 
-        ILoggerFactory _logging = null;
-
-        ILogger Log { get {
-            return _logging?.CreateLogger<Application>();
-        }}
+        ILogger<Application> Log {get; set;}
 
         /// <summary>
         /// Uses the dependency injection to pass in the Logging
         /// factory.
         /// </summary>
-        /// <param name="loggerFactory">Logger Factory Instance</param>
-        public Application (ILoggerFactory loggerFactory)
+        /// <param name="logger">Logger Factory Instance</param>
+        public Application (ILogger<Application> logger)
         {    
-            _logging = loggerFactory;
+            Log = logger;
         }
 
         /// <summary>
